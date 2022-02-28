@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type ="text/css">
+        *{
+            margin: 0px;
+        }
+        .box1{
+            background-color: aquamarine;
+        }
+        .box2{
+            background-color: blanchedalmond;
+        }
+        .cl{
+            clear: both;
+        }
+        .h16{
+            height: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+		<ul>
+			<li>张泊江1</li>
+			<li>张泊江2</li>
+			<li>张泊江3</li>
+			<li>张泊江4</li>
+		</ul>
+        <!--这个空气墙加的完全看不懂，因为前面也没有浮动
+            而且加的div属于父div的内容，背景颜色也会被继承
+        可能是作者写的有误，之后再问一下李老师-->
+        <div class="cl h16"></div>
+	</div>
+	<div class="box2">
+		<ul>
+			<li>paopao1</li>
+			<li>paopao2</li>
+			<li>paopao3</li>
+			<li>paopao4</li>
+		</ul>
+	</div>
+</body>
+</html>

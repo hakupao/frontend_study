@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type ="text/css">
+        *{
+            margin: 0px;
+        }
+        /*如果要元素浮动，祖先元素得有高度，至少高于后代元素。
+        有高度的盒子，才能关住浮动
+        方法1：（不常用）
+        缺点：内容容易被撑高
+        div{
+            height: 30px;
+        }*/
+        li{
+            float: left;
+            width: 150px;
+            height: 30px;
+            background-color: skyblue;
+        }
+        /*方法2：
+        clear：清除 both：左右浮动都清除
+        clear: both; 不许左右有浮动对象
+        缺点：所在的标签.box的margin属性失效（本质原因：box1和box2高度为零）
+
+        .box2{
+            clear: both;
+        }*/
+        /*方法3：隔墙
+        在两个div中添加一个div隔开
+        中间的div设置clear: both;属性
+        */
+        .cl{
+            clear: both;
+        }
+        .h16{
+            height: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+		<ul>
+			<li>张泊江1</li>
+			<li>张泊江2</li>
+			<li>张泊江3</li>
+			<li>张泊江4</li>
+		</ul>
+        <!--空气墙-->
+        <div class="cl"></div>
+	</div>
+    <!--空气墙 
+        <div class="cl h16"></div>
+    -->
+    <!--和上面的 方法2的clear: both呼应-->
+	<div class="box2">
+		<ul>
+			<li>paopao1</li>
+			<li>paopao2</li>
+			<li>paopao3</li>
+			<li>paopao4</li>
+		</ul>
+	</div>
+</body>
+</html>
