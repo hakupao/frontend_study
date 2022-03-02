@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            font-size: 14px;
+            font-family: "Micrsoft Yahei","Simsun";
+            height: 4000px;
+        }
+        .header{
+            height: 58px;
+            /*是不是在header里设置了高度，有header属性标签的所有后代标签都有这个高度属性*/
+            background-color: deepskyblue;
+        }
+        .inner_c{
+            /*为什么要额外定义一个inner_c，header里面只有这一个元素*/
+            width: 1000px;
+            margin: 0 auto;
+        }
+        .header .logo{
+            float: left;
+            margin-right: 40px;
+            overflow: hidden;
+        }
+        .header .nav{
+            float: left;
+        }
+        .header .nav ul{
+            list-style: none;
+        }
+        .header .nav ul li{
+            float: left;
+            width: 100px;
+            line-height: 58px;
+            border-left: 1px solid blue;
+        }
+        .header .nav ul li.last{
+            /*上面的标签li和.last类选择器可不可以加空格，变成后代而不是与的关系*/
+            border-right: 1px solid blue;
+        }
+        .header .nav ul li a{
+            text-decoration: none;
+            display: block;
+            height: 58px;
+            /*上面的58px指的是a标签的高度为了垂直居中吗，转换为块级元素后继承父的行高可不可以不设置行高*/
+            color: gray;
+            text-align: center;
+        }
+        .header .nav ul li a.current{
+            color: white;
+            background-color: blue;
+        }
+        .header .nav ul li a:hover{
+            color: white;
+            background-color: blue;
+        }
+        .header .jrwm_box{
+            float: left;
+            height: 58px;
+            width: 100px;
+            padding-left: 48px;
+            padding-top: 12px;
+        }
+        .header .jrwm_box .jrwm{
+            height: 34px;
+            background-image: url();
+            background-repeat: no-repeat;
+            text-align: center;
+        }
+        .header .jrwm_box .jrwm a{
+            display: block;
+            text-decoration: none;
+            line-height: 34px;
+            color: wheat;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="inner_c">
+            <div class="logo">
+                <img src="data:image/png;base64,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" alt="">
+            </div>
+            <div class="nav">
+                <ul>
+                    <li><a href="" class="current">top</a></li>
+                    <li><a href="">games</a></li>
+                    <li><a href="">news</a></li>
+                    <li><a href="">about us</a></li>
+                    <li><a href="">support</a></li>
+                    <li class="last"><a href="">investment</a></li>
+                </ul>
+            </div>
+            <div class="jrwm_box">
+                <div class="jrwm">
+                    <a href="www.google.com"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
