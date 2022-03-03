@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            font-size: 14px;
+            font-family: "Micrsoft Yahei","Simsun";
+            height: 9999px;
+        }
+        .header{
+            height: 58px;
+            /*是不是在header里设置了高度，有header属性标签的所有后代标签都有这个高度属性*/
+            background-color: deepskyblue;
+        }
+        .inner_c{
+            /*为什么要额外定义一个inner_c，header里面只有这一个元素*/
+            width: 1000px;
+            margin: 0 auto;
+        }
+        .header .logo{
+            float: left;
+            margin-right: 40px;
+            overflow: hidden;
+        }
+        .header .nav{
+            float: left;
+        }
+        .header .nav ul{
+            list-style: none;
+        }
+        .header .nav ul li{
+            float: left;
+            width: 100px;
+            line-height: 58px;
+            border-left: 1px solid blue;
+        }
+        .header .nav ul li.last{
+            /*上面的标签li和.last类选择器可不可以加空格，变成后代而不是与的关系*/
+            border-right: 1px solid blue;
+        }
+        .header .nav ul li a{
+            text-decoration: none;
+            display: block;
+            height: 58px;
+            /*上面的58px指的是a标签的高度为了垂直居中吗，转换为块级元素后继承父的行高可不可以不设置行高*/
+            color: gray;
+            text-align: center;
+        }
+        .header .nav ul li a.current{
+            color: white;
+            background-color: blue;
+        }
+        .header .nav ul li a:hover{
+            color: white;
+            background-color: blue;
+        }
+        .header .jrwm_box{
+            float: left;
+            height: 58px;
+            width: 100px;
+            padding-left: 48px;
+            padding-top: 12px;
+        }
+        .header .jrwm_box .jrwm{
+            height: 34px;
+            background-image: url(jrwm.png);
+            background-repeat: no-repeat;
+            text-align: center;
+        }
+        .header .jrwm_box .jrwm a{
+            display: block;
+            text-decoration: none;
+            line-height: 34px;
+            color: wheat;
+        }
+        .cl{
+            clear: both;
+        }
+        .banner{
+            height: 465px;
+            background: url() no-repeat center top;
+        }
+        .content{
+            padding-top: 50px;
+        }
+        .content .product{
+            height: 229px;
+            border-bottom: 1px solid whitesmoke;
+        }
+        .content .product ul{
+            list-style: none;
+        }
+        .content .product ul li{
+            float: left;
+            width: 218px;
+            margin-right: 43px;
+        }
+        .content .product ul li.last{
+            margin-right: 0px;
+            width: 217px;
+        }
+        .content .product ul li img{
+            width: 218px;
+            height: 130px;
+        }
+        .content .product ul li.last img{
+            width: 217px;
+        }
+        .content .product ul li h3{
+            text-align: center;
+            line-height: 38px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .content .product ul li p.djbf{
+            text-align: center;
+            line-height: 16px;
+        }
+        .content .product ul li p.djbf a{
+            font-size: 12px;
+            color: mediumspringgreen;
+            text-decoration: none;
+            background: url() no-repeat right 5px;
+            padding-right: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="inner_c">
+            <div class="logo">
+                <img src="logo.png" alt="">
+            </div>
+            <div class="nav">
+                <ul>
+                    <li><a href="" class="current">top</a></li>
+                    <li><a href="">games</a></li>
+                    <li><a href="">news</a></li>
+                    <li><a href="">about us</a></li>
+                    <li><a href="">support</a></li>
+                    <li class="last"><a href="">investment</a></li>
+                </ul>
+            </div>
+            <div class="jrwm_box">
+                <div class="jrwm">
+                    <a href="https://www.google.com" target="_blank">join us</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="cl"></div>
+
+    <div class="banner"></div>
+
+    <div class="content inner_c">
+        <div class="product">
+            <ul>
+                <li>
+                    <p><img src="" alt=""></p>
+                    <h3>宣传片</h3>
+                    <p class="djbf">
+                        <a href="">点击播放</a>
+                    </p>
+                </li>
+                <li>
+                    <p><img src="" alt=""></p>
+                    <h3>宣传片</h3>
+                    <p class="djbf">
+                        <a href="">点击播放</a>
+                    </p>
+                </li>
+                <li>
+                    <p><img src="" alt=""></p>
+                    <h3>宣传片</h3>
+                    <p class="djbf">
+                        <a href="">点击播放</a>
+                    </p>
+                </li>
+                <li class="last">
+                    <p><img src="" alt=""></p>
+                    <h3>宣传片</h3>
+                    <p class="djbf">
+                        <a href="">点击播放</a>
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
