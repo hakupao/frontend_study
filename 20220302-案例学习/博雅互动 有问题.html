@@ -42,15 +42,17 @@
             line-height: 58px;
             border-left: 1px solid blue;
         }
-        .header .nav ul li.last{
-            /*上面的标签li和.last类选择器可不可以加空格，变成后代而不是与的关系*/
+        .header .nav ul .last{
+            /*上面的标签li和.last类选择器可不可以加空格，
+            变成后代而不是与的关系*/
             border-right: 1px solid blue;
         }
         .header .nav ul li a{
             text-decoration: none;
             display: block;
             height: 58px;
-            /*上面的58px指的是a标签的高度为了垂直居中吗，转换为块级元素后继承父的行高可不可以不设置行高*/
+            /*上面的58px指的是a标签的高度为了垂直居中吗，
+            转换为块级元素后继承父的行高可不可以不设置行高*/
             color: gray;
             text-align: center;
         }
