@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let allStudents = ['A' , 'B-' , 1 , 4 , 5 , 2]
+        let studentsWhoPass = [];
+
+        let index1 = 0;
+        let index2 = 0;
+        while(index1 < allStudents.length){
+            if(allStudents[index1] >= 3){
+                studentsWhoPass[index2] = allStudents[index1];
+                index1++;
+                index2++;
+            }else if(allStudents[index1] === 'A' || allStudents[index1] === 'A-' || allStudents[index1] === 'B' || allStudents[index1] === 'B-' || allStudents[index1] === 'C'){
+                studentsWhoPass[index2] = allStudents[index1];
+                index1++;
+                index2++;
+            }else{
+                index1++;
+            }
+        }
+        
+        let index3 = 0;
+        while(index3 < studentsWhoPass.length){
+            const name = studentsWhoPass[index3];
+            console.log(name)
+            index3++
+        }
+    </script>
+</body>
+</html>
